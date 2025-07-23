@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiShares.Views.DashboardView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MauiShares.CustomViews"
+    xmlns:lottie="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+    Title="DashboardView"
+    BackgroundColor="#541430">
+
+    <controls:UploadView
+        LottieFile="animation3.json"
+        ShowOverlay="{Binding IsBusy}"
+        SubTitle="Try me now!"
+        SubTitleColor="LightGray"
+        TitleColor="DarkGray"
+        TitleProperty="Hello World!"
+        UploadCommand="{Binding UploadFileCommand}"
+        ViewBackground="#1F1F1F" />
+
+    <!--<Grid RowDefinitions=".2*,.8*">
+        <VerticalStackLayout VerticalOptions="Center">
+            <Label
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="Tap, Upload, Share"
+                TextColor="White" />
+            <Label
+                HorizontalOptions="Center"
+                Text="Your gateway for easy sharing"
+                TextColor="White" />
+        </VerticalStackLayout>
+        <Grid Grid.Row="1">
+            <lottie:SKLottieView
+                HeightRequest="400"
+                HorizontalOptions="Center"
+                RepeatCount="-1"
+                Source="animation2.json"
+                VerticalOptions="Center"
+                WidthRequest="400">
+                <lottie:SKLottieView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding UploadFileCommand}" />
+                </lottie:SKLottieView.GestureRecognizers>
+            </lottie:SKLottieView>
+        </Grid>
+        <Grid Grid.RowSpan="2" IsVisible="{Binding IsBusy}">
+            <Rectangle Fill="Black" Opacity="0.8" />
+            <VerticalStackLayout VerticalOptions="Center">
+                <ActivityIndicator
+                    HorizontalOptions="Center"
+                    IsRunning="{Binding IsBusy}"
+                    Color="Red" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Uploading File"
+                    TextColor="White" />
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>-->
+
+</ContentPage>

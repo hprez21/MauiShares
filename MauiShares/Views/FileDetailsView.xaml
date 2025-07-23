@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiShares.Views.FileDetailsView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FileDetailsView"
+    BackgroundColor="#541430">
+
+
+    <Grid RowDefinitions=".1*,.3*,.3*,.3*">
+        <Label
+            FontSize="25"
+            HorizontalTextAlignment="Center"
+            Text="Share File"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Image
+            Grid.Row="1"
+            Aspect="AspectFit"
+            Source="sharefile.png" />
+        <VerticalStackLayout
+            Grid.Row="2"
+            Padding="25"
+            HorizontalOptions="Center"
+            Spacing="15">
+            <Label
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="File Details: "
+                TextColor="White" />
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            Text="File Name: "
+                            TextColor="LightPink" />
+                        <Span Text="{Binding FileModel.name}" TextColor="White" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            Text="Max Downloads: "
+                            TextColor="LightPink" />
+                        <Span Text="{Binding FileModel.maxDownloads}" TextColor="White" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            Text="Auto Delete: "
+                            TextColor="LightPink" />
+                        <Span Text="{Binding FileModel.autoDelete}" TextColor="White" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            Text="Expires: "
+                            TextColor="LightPink" />
+                        <Span Text="{Binding FileModel.expires}" TextColor="White" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Row="3"
+            Spacing="15"
+            VerticalOptions="Center">
+            <Button
+                BackgroundColor="#BD336B"
+                Command="{Binding ShareUriCommand}"
+                CornerRadius="25"
+                HeightRequest="50"
+                Text="Share File"
+                WidthRequest="200" />
+            <Button
+                BackgroundColor="#752143"
+                Command="{Binding UploadCommand}"
+                CornerRadius="25"
+                HeightRequest="50"
+                Text="Upload New File"
+                WidthRequest="200" />
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
