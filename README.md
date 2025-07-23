@@ -2,6 +2,8 @@
 
 A .NET MAUI application designed to practice and demonstrate **Bindable Properties** implementation through a custom file sharing interface. This project showcases how to create reusable custom controls with bindable properties that can be easily customized and bound to ViewModels.
 
+<img width="750" height="422" alt="Udemy template (1)" src="https://github.com/user-attachments/assets/9542acfb-f1a9-4117-b861-fe2b93d65e7d" />
+
 ## Project Overview
 
 MauiShares is an educational project focused on mastering Bindable Properties in .NET MAUI. The application simulates a file sharing service where users can upload and share files. The main highlight is the `UploadView` custom control, which demonstrates various types of bindable properties including:
