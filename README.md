@@ -85,7 +85,8 @@ Each property follows the standard .NET MAUI bindable property pattern with prop
 
 ## Project Images
 
-*Note: This is an educational project focused on learning Bindable Properties in .NET MAUI. Screenshots and visual demonstrations would typically be included here to showcase the different states and customizations possible with the UploadView control.*
+<img width="750" height="422" alt="Udemy template (1)" src="https://github.com/user-attachments/assets/9542acfb-f1a9-4117-b861-fe2b93d65e7d" />
+
 
 ### Key Visual Elements:
 
